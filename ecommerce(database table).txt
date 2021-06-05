@@ -1,0 +1,96 @@
+1----->	use ecommerce;
+	CREATE TABLE customer_info
+		(User_Id INTEGER PRIMARY KEY auto_increment,
+		FirstName VARCHAR(30),
+		LastName VARCHAR(30),
+		Address1 VARCHAR(100),
+		Address2 VARCHAR(100),
+		EMail VARCHAR(30),
+		pincode VARCHAR(15),
+		City VARCHAR(30),
+		State VARCHAR(30),
+		Country VARCHAR(30),
+		Password VARCHAR(30),
+		Phone_No VARCHAR(15),
+		)
+
+2----->	use ecommerce;
+	CREATE TABLE contact
+		(c_id INTEGER PRIMARY KEY auto_increment,
+		Name VARCHAR(20),
+		EMail VARCHAR(40),
+		Subject VARCHAR(40),
+		Message VARCHAR(100))
+
+3----->	use ecommerce;
+	CREATE TABLE categories
+		(categoryId INTEGER PRIMARY KEY,
+		name TEXT
+		)
+
+
+4-----> use ecommerce;
+	CREATE TABLE products
+		(productId int(10) PRIMARY KEY auto_increment,
+		name TEXT,
+		price REAL,
+		description TEXT,
+		image VARCHAR(2000),
+		stock INTEGER,
+		categoryId INTEGER,
+		FOREIGN KEY(categoryId) REFERENCES categories(categoryId)
+		)
+
+
+
+5----->	use ecommerce;
+	CREATE TABLE cart
+		(User_Id INTEGER ,
+        productId INTEGER,
+		quantity INTEGER,
+	FOREIGN KEY(User_Id) REFERENCES customer_info(User_Id)
+	FOREIGN KEY(productId) REFERENCES products(productId)
+		)
+
+6----->	use ecommerce;
+	CREATE TABLE cart1
+		(cart_id INTEGER PRIMARY KEY auto_increment,
+        productId INTEGER,
+		User_Id INTEGER,
+        quantity INTEGER
+		)
+
+
+
+
+
+7----->	use ecommerce;
+	CREATE TABLE billDetails
+		(Bill_Id int(10) PRIMARY KEY auto_increment,
+        	User_Id INTEGER,
+		firstName TEXT,
+		lastName TEXT,
+		address1 TEXT,
+		address2 TEXT,
+		email TEXT,
+		pincode TEXT,
+		city TEXT,
+        	district TEXT,
+		state TEXT,
+		country TEXT, 
+		phone TEXT,
+		Purchase_Date date DEFAULT(current_date),
+       		FOREIGN KEY(User_Id) REFERENCES customer_info(User_Id)
+		)
+
+
+
+8----->	use ecommerce;
+	CREATE TABLE admin
+		(admin_Id INTEGER PRIMARY KEY auto_increment,
+        email VARCHAR(40),
+		Password VARCHAR(30)
+		)
+
+
+

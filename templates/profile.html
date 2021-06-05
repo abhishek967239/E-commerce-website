@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AK.in</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../static/Bootstrap/bootstrap.min.css">
+
+	<!-- manual CSS -->
+	<link rel="stylesheet" type="text/css" href="../static/css/style1.css">
+</head>
+<body>
+    <div class="container-fluid ">
+		<div class="container" style="padding: 0px;">
+			<nav class="navbar black navbar-expand-md navbar-light sticky-top " style="border-bottom: 1px solid lightgray;background-color: white;padding-top:15px;">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <div class="icon-img">
+                        <img src="static/img/logo/logo2_footer.PNG" width="100%;">
+                    </div>
+                  </a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="collapsibleNavbar" style="position: absolute; right: 25px;">
+                    <ul class="navbar-nav" >
+                      <li class="nav-item menu-opt ">
+                        <a class="nav-link" href="logout">Logout</a>
+                      </li>
+
+                    </ul>
+                 </div>
+             </div>
+        </nav>
+        <!-----------------------Table Data--------------------------------------->
+
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                      <th>firstname</th>
+                      <th>lastname</th>
+                    <th> email </th>
+                    <th>address1</th>
+                    <th>address2</th>
+                      <th>pincode</th>
+                      <th>city</th>
+                      <th>state</th>
+                      <th>country</th>
+                      <th>Phone No</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                    <tr>
+
+                        <td>{{ xyz.1 }} </td>
+                        <td > {{ xyz.2 }}</td>
+                         <td > {{ xyz.3 }}</td>
+                         <td > {{ xyz.4 }}</td>
+                        <td > {{ xyz.5 }}</td>
+                        <td > {{ xyz.6 }}</td>
+                        <td > {{ xyz.7 }}</td>
+                        <td > {{ xyz.8 }}</td>
+                        <td > {{ xyz.9 }}</td>
+                        <td > {{ xyz.11 }}</td>
+
+                    </tr>
+                         <td>
+                            <form action="edit" method="post">
+                                <input type="hidden" value="{{ xyz[0] }}" name="id">
+                            <input type="hidden" value="{{ xyz[3] }}" name="email">
+                                <input type="hidden" value="{{ xyz[4] }}" name="address1">
+                                <input type="hidden" value="{{ xyz[5] }}" name="address2">
+                                <input type="hidden" value="{{ xyz[6] }}" name="pincode">
+                                <input type="hidden" value="{{ xyz[7] }}" name="city">
+                                <input type="hidden" value="{{ xyz[11] }}" name="phone">
+                            <button type="submit" value="submit">Edit</button>
+                            </form>
+                        </td>
+
+
+                </tbody>
+              </table>
+        </div>
+    </div>
+</body>
+</html>

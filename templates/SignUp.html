@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>AK.in</title>
+        <link rel="stylesheet" text="text/css" href="/static/css1/style.css">
+        <body>
+            <div class="Sign-Up-Form">
+                <img src="/static/user-Icon.png">
+                <h1>SIGN UP FORM</h1>
+               <form action="register" method="post" onsubmit="return test()">
+                    <p>First Name: <input type="text" name="firstName"placeholder="First Name"></p>
+                    <p>Last Name: <input type="text" name="lastName"placeholder="Last Name"></p>
+                    <p>Address Line 1: <input type="text" name="address1"placeholder="Address1"></p>
+                    <p>Address Line 2: <input type="text" name="address2"placeholder="Address2"></p>
+                    <p>pin-code: <input type="text" name="pin-code"placeholder="pin-code"></p>
+                    <p>City: <input type="text" name="city"placeholder="City"></p>
+                    <p>State: <input type="text" name="state"placeholder="State"></p>
+                    <p>Country: <input type="text" name="country"placeholder="Country"></p>
+                    <p>Phone Number: <input type="tel" name="phone"placeholder="Phone Number"></p>
+
+                   <p>EMail: <input type="email" class="input-box" name="email" placeholder=" Email"></p>
+
+                    <p>Password: <input type="password" class="input-box" name="pwd" id="pwd" placeholder="Password"></p>
+                    <p>Coniform Password:  <input type="password" class="input-box"  id="cpwd" placeholder="Confirm Password"></p>
+                    <p><span><input type="checkbox"></span>I Agree to the terms of services.</p>
+                   <button type="submit" class="signup-btn">SIGN UP</button>
+                   <hr>
+                   <p class="or">OR</p>
+                  <button type="button" class="google-btn">LOGIN WITH GOOGLE</button>
+                  <p>Do you have an account ? <a href="login.html">SIGN IN</a></p>
+                    </form>
+        </body>
+        <script>
+            function test() {
+                var pwd=document.getElementById("pwd").value;
+
+                var cpwd=document.getElementById("cpwd").value;
+                if(pwd == cpwd){
+                    return true;
+                }
+                else{
+                    alert( "password and confirm password are not correct")
+                    return false;
+                }
+            }
+
+
+
+        </script>
+    </head>
+    </html>

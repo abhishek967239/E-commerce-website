@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AK.in</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../static/Bootstrap/bootstrap.min.css">
+
+	<!-- manual CSS -->
+	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+</head>
+<body>
+    <div class="container-fluid ">
+		<div class="container" style="padding: 0px;">
+			<nav class="navbar black navbar-expand-md navbar-light sticky-top " style="border-bottom: 1px solid lightgray;background-color: white;padding-top:15px;">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <div class="icon-img">
+                        <img src="static/img/logo/logo2_footer.PNG" width="100%;">
+                    </div>
+                  </a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="collapsibleNavbar" style="position: absolute; right: 25px;">
+                    <ul class="navbar-nav" >
+                      <li class="nav-item menu-opt ">
+                        <a class="nav-link" href="/login">Profile</a>
+                      </li>
+                      <li class="nav-item menu-opt ">
+                        <a class="nav-link" href="/logout">Logout</a>
+                      </li>
+
+                    </ul>
+                 </div>
+             </div>
+        </nav>
+        <!-----------------------Url Box--------------------------------------->
+        <div class="container-fuild output-outterlayer">
+                <div class="container" >
+                     <form action="/update" method="post">
+                        <div class="row" style="padding:10px 0px;" >
+                            <div class="col-md-12">
+                                    <input type="hidden" name="id" value="{{ id }}">
+                                    <input type="email"  name="email" value={{ email }} placeholder="email" required>
+                                    <input type="text" value="{{ address1}}" name="address1"  placeholder="Address1" />
+                                    <input type="text" value="{{ address2 }}" name="address2"  placeholder="Address2" />
+                                    <input type="text" value="{{ zipcode }}" name="pincode"  placeholder="pincode" />
+                                    <input type="text" value="{{ city }}" name="city"  placeholder="City" />
+                                    <input type="text" value="{{ phone }}" name="phone"  placeholder="Phone_No" />
+
+
+
+                            </div>
+                            <div class="col-md-4">
+							<input type="submit" name="short-btn" value="UPDATE">
+						</div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        <!-----------------------Table Data--------------------------------------->
+
+                    </div>
+    </div>
+</body>
+</html>

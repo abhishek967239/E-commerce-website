@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>AK.in</title>
+</head>
+<body>
+<h2>Add items</h2>
+<form action="additem" method="POST" enctype="multipart/form-data">
+	Name: <input type="text" name="name"><br>
+	Price: <input type="text" name="price"><br>
+	Description: <textarea name="description" rows=3 cols="40"></textarea><br>
+	Image:
+	<p>File: <input type = "file" name = "img" /></p>
+
+
+	Stock: <input type="text" name="stock"><br>
+	Category: <select name="category">
+		{% for row in categories %}
+			<option value="{{row[0]}}">{{row[1]}}</option>
+		{% endfor %}
+	</select><br>
+	<input type="submit">
+
+</form>
+</body>
+</html>

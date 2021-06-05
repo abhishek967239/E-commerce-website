@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AK.in</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../static/Bootstrap/bootstrap.min.css">
+
+	<!-- manual CSS -->
+	<link rel="stylesheet" type="text/css" href="../static/css/style1.css">
+</head>
+<body>
+    <div class="container-fluid ">
+		<div class="container" style="padding: 0px;">
+			<nav class="navbar black navbar-expand-md navbar-light sticky-top " style="border-bottom: 1px solid lightgray;background-color: white;padding-top:15px;">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <div class="icon-img">
+                        <img src="static/img/logo/logo2_footer.PNG" width="100%;">
+                    </div>
+                  </a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="collapsibleNavbar" style="position: absolute; right: 25px;">
+                    <ul class="navbar-nav" >
+                      <li class="nav-item menu-opt ">
+                        <a class="nav-link" href="logout">Logout</a>
+                      </li>
+
+                    </ul>
+                 </div>
+             </div>
+        </nav>
+        <!-----------------------Table Data--------------------------------------->
+
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                      <th>customer Id</th>
+                      <th>Name</th>
+                    <th> email </th>
+                    <th>subject</th>
+                    <th>message</th>
+                      <th>Date-time</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+
+                    {% for item in xyz %}
+                    <tr>
+                        <td>{{ item.0 }} </td>
+                        <td>{{ item.1 }} </td>
+                        <td > {{ item.2 }}</td>
+                         <td > {{ item.3 }}</td>
+                         <td > {{ item.4 }}</td>
+                            <td > {{ item.5 }}</td>
+
+                    </tr>
+                    {% endfor %}
+                </tbody>
+              </table>
+        </div>
+    </div>
+</body>
+</html>
